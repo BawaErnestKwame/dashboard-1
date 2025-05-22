@@ -17,7 +17,14 @@ const App = () => {
         <Navbar/>
 
         <div className="px-0 md:px-5 2xl:px-20">
-          <Info/>
+          <Info
+          
+          title='Dashboard'
+
+          subTitle= 'Monitor your financial activities'
+          
+
+          />
           <Stats/>
 
           <div className=" flex w-full flex-col-reverse md:flex-row items-center gap-10">
