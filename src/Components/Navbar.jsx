@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import CurrencyExchangeIcon from '@mui/icons-material/CurrencyExchange';
 import AirlineSeatReclineNormalIcon from '@mui/icons-material/AirlineSeatReclineNormal';
 import Avatar  from '../assets/pngwing.png';
+import ThemeSwitch from './ThemeSwitch';
 
 const links = ["Dashboard", "Transaction", "Account", "Settings"];
 
@@ -41,8 +42,12 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className=' '>
-        {/* themechanger */}
+        <div className=' flex items-center gap-10 2xl:gap-20'>
+
+          <ThemeSwitch/>
+
+
+        
 
         <div className="flex items-center gap-2">
           <img src={Avatar} alt="" className='w-10 md:w-12 h-10 md:h-12 rounded-full object-cover' />

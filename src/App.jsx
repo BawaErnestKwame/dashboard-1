@@ -6,11 +6,12 @@ import Stats from './Components/Stats';
 import Transactions from './Components/Transaction';
 import DoughnutChart from './Components/DoughnutChart';
 import Accounts from './Components/Accounts';
+import useStore from './Store/index.js';
 
 
 
 const App = () => {
-  const theme = "light"
+  const theme = useStore((state)=> state.theme)
   return (
     <main className={theme}>
       <div className=" w-full px-6 md:bg-white dark:bg-slate-900">
