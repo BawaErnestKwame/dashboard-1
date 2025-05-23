@@ -1,26 +1,23 @@
-// ThemeSwitch.jsx
-import React, { useState } from 'react';
-import useStore from '../Store/index.js'; // ✅ Import your custom Zustand store
+// src/Components/ThemeSwitch.jsx
+import React from 'react';
+import useStore from '../Store/index.js';
 
 const ThemeSwitch = () => {
   const theme = useStore((state) => state.theme);
   const setTheme = useStore((state) => state.setTheme);
-  const [isDarkMode, setIsDarkmode] = useState(theme === "dark");
 
   const toggleTheme = () => {
-    const newTheme = isDarkMode ? "light" : "dark";
-    setIsDarkmode(!isDarkMode);
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
   };
 
   return (
-    <div className={`switch ${isDarkMode ? "light" : "dark"}`} onClick={toggleTheme}>
-        <div className={`ball ${isDarkMode ? "dark" : "light"}`}>
-            <div className={`ball ${isDarkMode ? "dark" : "light"}`}></div>
-        </div>
-      
-    </div>
+    <button
+      onClick={toggleTheme}
+      className="p-2 rounded bg-gray-200 dark:bg-gray-700 text-sm"
+    >
+      {theme === 'dark' ? '☀️ Switch to Light' : '🌙 Switch to Dark'}
+    </button>
   );
 };
 

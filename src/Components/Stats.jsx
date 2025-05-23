@@ -49,7 +49,7 @@ const Stats = () => {
 
               <div className=" space-y-3 ">
                 <span className='text-gray-600 dark:text-gray-400 text-base md:text-lg'>{item.label}</span>
-                <p className=" text-2xl 2xl:text-3xl font-medium text-black dark:text-gray-400">{item.amount}</p>
+                <p className=" text-2xl 2xl:text-3xl font-medium text-black dark:text-gray-400">${item.amount}</p>
               </div>
 
 
